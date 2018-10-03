@@ -9,6 +9,19 @@ eureka:
     serviceUrl:
       defaultZone: http://localhost:8061/eureka/
       
-logging:
+logging: 
   pattern: 
     console: "%d{yyyy-MM-dd HH:mm:ss} ${LOG_LEVEL_PATTERN:-%5p} %m%n"
+
+spring:  
+  rabbitmq:  
+    host: localhost
+    port: 5672
+    username: guest
+    password: guest
+
+management: 
+  endpoints: 
+    web: 
+      exposure: 
+        include: "*"
